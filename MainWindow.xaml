@@ -1,0 +1,93 @@
+﻿<Window x:Name="frmMain" x:Class="VintelerEricav2_Lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VintelerEricav2_Lab2"
+        mc:Ignorable="d"
+        Title="Virtual Doughnuts Factory" Height="450" Width="800" ResizeMode="NoResize" Background="#FF9CC6F4">
+    <Grid>
+        <GroupBox x:Name="gbRaised" Header="Raised" Margin="99,79,505,233" FontWeight="Normal"/>
+        <GroupBox x:Name="gbFilled" Header="Filled" Margin="410,72,140,216" FontWeight="Bold"/>
+        <TextBox x:Name="txtGlazedRaised" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="175,112,521,293"/>
+        <TextBox x:Name="txtSugarRaised" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="175,154,521,249"/>
+        <Label x:Name="lblChocolateFilled" Content="Chocolate" Margin="424,132,236,272"/>
+        <Label x:Name="lblLemonFilled" Content="Lemon" Margin="426,95,258,306" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.511"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="txtLemonFilled" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="534,103,162,307"/>
+        <TextBox x:Name="txtChocolateFilled" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="534,138,162,272"/>
+        <Label x:Name="lblVanillaFilled" Content="Vanilla" Margin="424,176,286,233"/>
+        <TextBox x:Name="txtVanillaFilled" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="534,174,162,233"/>
+        <GroupBox x:Name="gbSale" Header="Current Sale" Margin="34,228,40,10" FontWeight="Bold"/>
+        <Label x:Name="lblGlazed" Content="Glazed" Margin="115,110,631,293"/>
+        <Label x:Name="lblSugar" Content="Sugar" Margin="115,154,631,249"/>
+        <Label x:Name="lblTitle" Content="Doughnuts - Bake &amp; Sale" Margin="215,23,293,368" FontSize="24" FontWeight="Bold"/>
+        <Label x:Name="lblQuantity" Content="Quantity" Margin="53,263,688,141"/>
+        <TextBox x:Name="txtQuantity" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="117,263,579,140"/>
+        <Label x:Name="lblType" Content="Type" Margin="237,264,509,140"/>
+        <ComboBox x:Name="cmbType" Width="120" Margin="282,261,398,139"/>
+        <Label x:Name="lblPrice" Content="Price" Margin="421,264,325,140"/>
+        <TextBox x:Name="txtPrice" TextWrapping="Wrap" IsReadOnly="True" Margin="468,263,228,141"/>
+        <ListBox x:Name="lstSale" Margin="53,312,228,64"/>
+        <Label x:Name="lblTotal" Content="Total" Margin="400,380,340,24"/>
+        <TextBox x:Name="txtTotal" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="468,375,228,19"/>
+        <Button x:Name="btnAddToSale" Content="Add To Sale" HorizontalAlignment="Left" Margin="609,260,0,0" VerticalAlignment="Top" Width="116" Height="25">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnRemoveItem" Content="Remove Item" HorizontalAlignment="Left" Margin="609,294,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5" Height="26">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnCheckout" Content="Check Out" HorizontalAlignment="Left" Margin="609,374,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5" Height="42" FontWeight="Bold">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="130">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="Doughnuts">
+                <MenuItem Header="Make">
+                    <MenuItem Header="Raised">
+                        <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
+                        <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
+                    </MenuItem>
+                    <MenuItem Header="Filled">
+                        <MenuItem x:Name="lemonMenuItem" Header="Lemon"/>
+                        <MenuItem x:Name="chocolateMenuItem" Header="Chocolate"/>
+                        <MenuItem x:Name="vanillaMenuItem" Header="Vanilla"/>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Stop"/>
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</Window>
