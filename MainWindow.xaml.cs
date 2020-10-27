@@ -165,9 +165,7 @@ namespace VintelerEricav2_Lab2
             {
                 try
                 {
-                    lstSale.Items.Add(txtQuantity.Text + " " + selectedDoughnut.ToString() +
-                    ":" + txtPrice.Text + " " + double.Parse(txtQuantity.Text) *
-                    double.Parse(txtPrice.Text));
+                    lstSale.Items.Add(txtQuantity.Text + " " + selectedDoughnut.ToString() + ":" + txtPrice.Text + " " + double.Parse(txtQuantity.Text) * double.Parse(txtPrice.Text));
                 }
                 catch (Exception) { }
             }

@@ -53,7 +53,8 @@
                         <MenuItem x:Name="vanillaFilledMenuItem" Header="Vanilla" IsCheckable="True"/>
                     </MenuItem>
                 </MenuItem>
-                <MenuItem Header="Stop"/>
+                <MenuItem x:Name="mnuStop" Header="Stop" Click="stopToolStripMenuItem_Click"/>
+                    <MenuItem Header="Inventory" ></MenuItem>
             </MenuItem>
         </Menu>
 
