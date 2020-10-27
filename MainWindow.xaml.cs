@@ -72,6 +72,15 @@ namespace VintelerEricav2_Lab2
                     mRaisedSugar++;
                     txtSugarRaised.Text = mRaisedSugar.ToString();
                     break;
+                case DoughnutType.Lemon:
+                    mFilledLemon++;
+                    txtLemonFilled.Text = mFilledLemon.ToString(); break;
+                case DoughnutType.Chocolate:
+                    mFilledChocolate++;
+                    txtChocolateFilled.Text = mFilledChocolate.ToString(); break;
+                case DoughnutType.Vanilla:
+                    mFilledVanilla++;
+                    txtVanillaFilled.Text = mFilledVanilla.ToString(); break;
             }
         }
         private void stopToolStripMenuItem_Click(object sender, RoutedEventArgs e)
