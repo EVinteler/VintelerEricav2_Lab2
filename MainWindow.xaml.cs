@@ -41,6 +41,10 @@ namespace VintelerEricav2_Lab2
         private int mFilledLemon;
         private int mFilledChocolate;
         private int mFilledVanilla;
+        private object glazedToolStripMenuItem;
+        private object sugarToolStripMenuItem;
+
+        public object DoughnutType { get; private set; }
 
         private void glazedToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
