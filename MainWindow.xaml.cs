@@ -29,6 +29,8 @@ namespace VintelerEricav2_Lab2
             CommandBinding cmd1 = new CommandBinding();
             //asociere comanda
             cmd1.Command = ApplicationCommands.Print;
+            //input gesture: I + Alt
+            ApplicationCommands.Print.InputGestures.Add(new KeyGesture(Key.I, ModifierKeys.Alt));
             //asociem un handler
             cmd1.Executed += new ExecutedRoutedEventHandler(CtrlP_CommandHandler);
             //adaugam la colectia CommandBindings
