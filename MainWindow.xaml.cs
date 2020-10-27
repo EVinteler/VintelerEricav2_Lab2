@@ -169,14 +169,45 @@ namespace VintelerEricav2_Lab2
                     ":" + txtPrice.Text + " " + double.Parse(txtQuantity.Text) *
                     double.Parse(txtPrice.Text));
                 }
-                catch (Exception)
-                {
-
-                }
+                catch (Exception) { }
             }
             else
             {
                 MessageBox.Show("Cantitatea introdusa nu este disponibila in stoc!");
+            }
+        }
+        private void btnRemoveItem_Click(object sender, RoutedEventArgs e)
+        {
+            lstSale.Items.Remove(lstSale.SelectedItem);
+        }
+        private void btnCheckOut_Click(object sender, RoutedEventArgs e)
+        {
+            txtTotal.Text = (double.Parse(txtTotal.Text) + double.Parse(txtQuantity.Text) * double.Parse(txtPrice.Text)).ToString();
+            foreach (string s in lstSale.Items)
+            {
+                switch (s.Substring(s.IndexOf(" ") + 1, s.IndexOf(":") - s.IndexOf(" ") - 1))
+                {
+                    case "Glazed":
+                        mRaisedGlazed = mRaisedGlazed - Int32.Parse(s.Substring(0, s.IndexOf(" ")));
+                        txtGlazedRaised.Text = mRaisedGlazed.ToString();
+                        break;
+                    case "Sugar":
+                        mRaisedSugar = mRaisedSugar - Int32.Parse(s.Substring(0, s.IndexOf(" ")));
+                        txtSugarRaised.Text = mRaisedSugar.ToString();
+                        break;
+                    case "Chocolate":
+                        mFilledChocolate = mFilledChocolate - Int32.Parse(s.Substring(0, s.IndexOf(" ")));
+                        txtChocolateFilled.Text = mFilledChocolate.ToString();
+                        break;
+                    case "Lemon":
+                        mFilledLemon = mFilledLemon - Int32.Parse(s.Substring(0, s.IndexOf(" ")));
+                        txtLemonFilled.Text = mFilledLemon.ToString();
+                        break;
+                    case "Vanilla":
+                        mFilledVanilla = mFilledVanilla - Int32.Parse(s.Substring(0, s.IndexOf(" ")));
+                        txtVanillaFilled.Text = mFilledVanilla.ToString();
+                        break;
+                }
             }
         }
     }

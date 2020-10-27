@@ -33,9 +33,9 @@
         <TextBox x:Name="txtTotal" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="468,375,228,19"/>
         <Button x:Name="btnAddToSale" Content="Add To Sale" HorizontalAlignment="Left" Margin="609,260,0,0" VerticalAlignment="Top" Width="116" Height="25" Click="btnAdd_Click">
         </Button>
-        <Button x:Name="btnRemoveItem" Content="Remove Item" HorizontalAlignment="Left" Margin="609,294,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5" Height="26">
+        <Button x:Name="btnRemoveItem" Content="Remove Item" HorizontalAlignment="Left" Margin="609,294,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5" Height="26" Click=" btnRemoveItem_Click">
         </Button>
-        <Button x:Name="btnCheckout" Content="Check Out" HorizontalAlignment="Left" Margin="609,374,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5" Height="42" FontWeight="Bold">
+        <Button x:Name="btnCheckout" Content="Check Out" HorizontalAlignment="Left" Margin="609,374,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5" Height="42" FontWeight="Bold" Click=" btnCheckOut_Click">
         </Button>
         <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="130">
             <MenuItem Header="File">
