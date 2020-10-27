@@ -24,6 +24,20 @@ namespace VintelerEricav2_Lab2
         public MainWindow()
         {
             InitializeComponent();
+
+            //creare obiect binding pentru comanda
+            CommandBinding cmd1 = new CommandBinding();
+            //asociere comanda
+            cmd1.Command = ApplicationCommands.Print;
+            //asociem un handler
+            cmd1.Executed += new ExecutedRoutedEventHandler(CtrlP_CommandHandler);
+            //adaugam la colectia CommandBindings
+            this.CommandBindings.Add(cmd1);
+        }
+
+        private void CtrlP_CommandHandler(object sender, ExecutedRoutedEventArgs e)
+        {
+            MessageBox.Show("You have in stock:" + mRaisedGlazed + " Glazed," + mRaisedSugar + "Sugar, "+mFilledLemon+" Lemon, "+mFilledChocolate+" Chocolate, "+mFilledVanilla+" Vanilla");
         }
 
         private DoughnutMachine myDoughnutMachine;
@@ -81,13 +95,16 @@ namespace VintelerEricav2_Lab2
                     break;
                 case DoughnutType.Lemon:
                     mFilledLemon++;
-                    txtLemonFilled.Text = mFilledLemon.ToString(); break;
+                    txtLemonFilled.Text = mFilledLemon.ToString(); 
+                    break;
                 case DoughnutType.Chocolate:
                     mFilledChocolate++;
-                    txtChocolateFilled.Text = mFilledChocolate.ToString(); break;
+                    txtChocolateFilled.Text = mFilledChocolate.ToString(); 
+                    break;
                 case DoughnutType.Vanilla:
                     mFilledVanilla++;
-                    txtVanillaFilled.Text = mFilledVanilla.ToString(); break;
+                    txtVanillaFilled.Text = mFilledVanilla.ToString(); 
+                    break;
             }
         }
         private void stopToolStripMenuItem_Click(object sender, RoutedEventArgs e)

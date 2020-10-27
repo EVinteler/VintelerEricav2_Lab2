@@ -54,7 +54,7 @@
                     </MenuItem>
                 </MenuItem>
                 <MenuItem x:Name="mnuStop" Header="Stop" Click="stopToolStripMenuItem_Click"/>
-                    <MenuItem Header="Inventory" ></MenuItem>
+                <MenuItem Header="Inventory" Command="ApplicationCommands.Print"></MenuItem>
             </MenuItem>
         </Menu>
 
