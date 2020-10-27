@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VintelerEricav2_Lab2"
+        xmlns:CustomCommands="clr-namespace:VintelerEricav2_Lab2.CustomCommands"
         mc:Ignorable="d"
         Title="Virtual Doughnuts Factory" Height="450" Width="800" ResizeMode="NoResize" Background="#FF9CC6F4" Loaded="frmMain_Loaded">
     <Grid MenuItem.Click="FilledItemsShow_Click" Margin="0,0,0,-40">
@@ -53,7 +54,7 @@
                         <MenuItem x:Name="vanillaFilledMenuItem" Header="Vanilla" IsCheckable="True"/>
                     </MenuItem>
                 </MenuItem>
-                <MenuItem x:Name="mnuStop" Header="Stop" Click="stopToolStripMenuItem_Click"/>
+                <MenuItem x:Name="mnuStop" Header="Stop" Click="stopToolStripMenuItem_Click" InputGestureText="Ctrl+S" Command="CustomCommands:StopCommand.Launch"/>
                 <MenuItem Header="Inventory" Command="ApplicationCommands.Print"></MenuItem>
             </MenuItem>
         </Menu>

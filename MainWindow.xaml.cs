@@ -21,7 +21,7 @@ namespace VintelerEricav2_Lab2
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow() // constructorul clasei MainWindow
         {
             InitializeComponent();
 
@@ -35,6 +35,19 @@ namespace VintelerEricav2_Lab2
             cmd1.Executed += new ExecutedRoutedEventHandler(CtrlP_CommandHandler);
             //adaugam la colectia CommandBindings
             this.CommandBindings.Add(cmd1);
+
+            //Doughnuts>Stop
+            //comanda custom
+            CommandBinding cmd2 = new CommandBinding();
+            cmd2.Command = CustomCommands.StopCommand.Launch;
+            cmd2.Executed += new ExecutedRoutedEventHandler(CtrlS_CommandHandler);//asociem handler
+            this.CommandBindings.Add(cmd2);
+        }
+        private void CtrlS_CommandHandler(object sender, ExecutedRoutedEventArgs e) // related cu CtrlS din constructorul MainWindow
+        {
+            //handler pentru comanda Ctrl+S -> se va executa stopToolStripMenuItem_Click
+            MessageBox.Show("Ctrl+S was pressed! The doughnut machine will stop!");
+            this.stopToolStripMenuItem_Click(sender, e);
         }
 
         private void CtrlP_CommandHandler(object sender, ExecutedRoutedEventArgs e)
