@@ -13,14 +13,6 @@
         <TextBox x:Name="txtSugarRaised" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="175,154,521,249"/>
         <Label x:Name="lblChocolateFilled" Content="Chocolate" Margin="424,132,236,272"/>
         <Label x:Name="lblLemonFilled" Content="Lemon" Margin="426,95,258,306" RenderTransformOrigin="0.5,0.5">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.511"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
         </Label>
         <TextBox x:Name="txtLemonFilled" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="534,103,162,307"/>
         <TextBox x:Name="txtChocolateFilled" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="534,138,162,272"/>
@@ -40,34 +32,10 @@
         <Label x:Name="lblTotal" Content="Total" Margin="400,380,340,24"/>
         <TextBox x:Name="txtTotal" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="468,375,228,19"/>
         <Button x:Name="btnAddToSale" Content="Add To Sale" HorizontalAlignment="Left" Margin="609,260,0,0" VerticalAlignment="Top" Width="116" Height="25">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
         </Button>
         <Button x:Name="btnRemoveItem" Content="Remove Item" HorizontalAlignment="Left" Margin="609,294,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5" Height="26">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
         </Button>
         <Button x:Name="btnCheckout" Content="Check Out" HorizontalAlignment="Left" Margin="609,374,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5" Height="42" FontWeight="Bold">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
         </Button>
         <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="130">
             <MenuItem Header="File">
@@ -80,9 +48,9 @@
                         <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
                     </MenuItem>
                     <MenuItem Header="Filled">
-                        <MenuItem x:Name="lemonMenuItem" Header="Lemon"/>
-                        <MenuItem x:Name="chocolateMenuItem" Header="Chocolate"/>
-                        <MenuItem x:Name="vanillaMenuItem" Header="Vanilla"/>
+                        <MenuItem x:Name="lemonFilledMenuItem" Header="Lemon"/>
+                        <MenuItem x:Name="chocolateFilledMenuItem" Header="Chocolate"/>
+                        <MenuItem x:Name="vanillaFilledMenuItem" Header="Vanilla"/>
                     </MenuItem>
                 </MenuItem>
                 <MenuItem Header="Stop"/>
