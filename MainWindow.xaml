@@ -31,7 +31,7 @@
         <ListBox x:Name="lstSale" Margin="53,312,228,64"/>
         <Label x:Name="lblTotal" Content="Total" Margin="400,380,340,24"/>
         <TextBox x:Name="txtTotal" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="468,375,228,19"/>
-        <Button x:Name="btnAddToSale" Content="Add To Sale" HorizontalAlignment="Left" Margin="609,260,0,0" VerticalAlignment="Top" Width="116" Height="25">
+        <Button x:Name="btnAddToSale" Content="Add To Sale" HorizontalAlignment="Left" Margin="609,260,0,0" VerticalAlignment="Top" Width="116" Height="25" Click="btnAdd_Click">
         </Button>
         <Button x:Name="btnRemoveItem" Content="Remove Item" HorizontalAlignment="Left" Margin="609,294,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5" Height="26">
         </Button>

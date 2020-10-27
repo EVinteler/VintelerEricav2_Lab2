@@ -123,6 +123,61 @@ namespace VintelerEricav2_Lab2
             mesaj = SelectedItem.Header.ToString() + " doughnuts are being cooked!";
             this.Title = mesaj;
         }
-        
+        private void cmbType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            txtPrice.Text = cmbType.SelectedValue.ToString();
+            KeyValuePair<DoughnutType, double> selectedEntry = (KeyValuePair<DoughnutType, double>)cmbType.SelectedItem;
+            selectedDoughnut = selectedEntry.Key;
+        }
+        private int ValidateQuantity(DoughnutType selectedDoughnut)
+        {
+            int q = int.Parse(txtQuantity.Text);
+            int r = 1;
+
+            switch (selectedDoughnut)
+            {
+                case DoughnutType.Glazed:
+                    if (q > mRaisedGlazed)
+                        r = 0;
+                    break;
+                case DoughnutType.Sugar:
+                    if (q > mRaisedSugar)
+                        r = 0;
+                    break;
+                case DoughnutType.Chocolate:
+                    if (q > mFilledChocolate)
+                        r = 0;
+                    break;
+                case DoughnutType.Lemon:
+                    if (q > mFilledLemon)
+                        r = 0;
+                    break;
+                case DoughnutType.Vanilla:
+                    if (q > mFilledVanilla)
+                        r = 0;
+                    break;
+            }
+            return r;
+        }
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            if (ValidateQuantity(selectedDoughnut) > 0)
+            {
+                try
+                {
+                    lstSale.Items.Add(txtQuantity.Text + " " + selectedDoughnut.ToString() +
+                    ":" + txtPrice.Text + " " + double.Parse(txtQuantity.Text) *
+                    double.Parse(txtPrice.Text));
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Cantitatea introdusa nu este disponibila in stoc!");
+            }
+        }
     }
 }
