@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VintelerEricav2_Lab2"
         mc:Ignorable="d"
-        Title="Virtual Doughnuts Factory" Height="450" Width="800" ResizeMode="NoResize" Background="#FF9CC6F4">
+        Title="Virtual Doughnuts Factory" Height="450" Width="800" ResizeMode="NoResize" Background="#FF9CC6F4" Loaded="frmMain_Loaded">
     <Grid>
         <GroupBox x:Name="gbRaised" Header="Raised" Margin="99,79,505,233" FontWeight="Normal"/>
         <GroupBox x:Name="gbFilled" Header="Filled" Margin="410,72,140,216" FontWeight="Bold"/>
