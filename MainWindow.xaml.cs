@@ -39,20 +39,18 @@ namespace VintelerEricav2_Lab2
         private int mFilledLemon;
         private int mFilledChocolate;
         private int mFilledVanilla;
-        private object glazedToolStripMenuItem;
-        private object sugarToolStripMenuItem;
 
 
         private void glazedToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            glazedToolStripMenuItem.IsChecked = true;
-            sugarToolStripMenuItem.IsChecked = false;
+            glazedMenuItem.IsChecked = true;
+            sugarMenuItem.IsChecked = false;
             myDoughnutMachine.MakeDoughnuts(DoughnutType.Glazed);
         }
         private void sugarToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            glazedToolStripMenuItem.IsChecked = false;
-            sugarToolStripMenuItem.IsChecked = true;
+            glazedMenuItem.IsChecked = false;
+            sugarMenuItem.IsChecked = true;
             myDoughnutMachine.MakeDoughnuts(DoughnutType.Sugar);
         }
 
