@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:VintelerEricav2_Lab2"
         mc:Ignorable="d"
         Title="Virtual Doughnuts Factory" Height="450" Width="800" ResizeMode="NoResize" Background="#FF9CC6F4" Loaded="frmMain_Loaded">
-    <Grid>
+    <Grid MenuItem.Click="FilledItemsShow_Click">
         <GroupBox x:Name="gbRaised" Header="Raised" Margin="99,79,505,233" FontWeight="Normal"/>
         <GroupBox x:Name="gbFilled" Header="Filled" Margin="410,72,140,216" FontWeight="Bold"/>
         <TextBox x:Name="txtGlazedRaised" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="175,112,521,293"/>
@@ -47,7 +47,7 @@
                         <MenuItem x:Name="glazedMenuItem" Header="Glazed" IsCheckable="True"/>
                         <MenuItem x:Name="sugarMenuItem" Header="Sugar" IsCheckable="True"/>
                     </MenuItem>
-                    <MenuItem Header="Filled">
+                    <MenuItem Header="Filled" Click="FilledItems_Click">
                         <MenuItem x:Name="lemonFilledMenuItem" Header="Lemon" IsCheckable="True" />
                         <MenuItem x:Name="chocolateFilledMenuItem" Header="Chocolate" IsCheckable="True"/>
                         <MenuItem x:Name="vanillaFilledMenuItem" Header="Vanilla" IsCheckable="True"/>

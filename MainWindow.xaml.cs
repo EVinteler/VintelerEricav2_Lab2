@@ -93,5 +93,17 @@ namespace VintelerEricav2_Lab2
                MessageBoxImage.Error);
             }
         }
+
+        private void FilledItems_Click(object sender, RoutedEventArgs e)
+        {
+            string DoughnutFlavour;
+
+            MenuItem SelectedItem = (MenuItem)e.OriginalSource;
+            DoughnutFlavour = SelectedItem.Header.ToString();
+            Enum.TryParse(DoughnutFlavour, out DoughnutType myFlavour);
+            myDoughnutMachine.MakeDoughnuts(myFlavour);
+
+        }
+
     }
 }
