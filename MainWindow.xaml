@@ -44,13 +44,13 @@
             <MenuItem Header="Doughnuts">
                 <MenuItem Header="Make">
                     <MenuItem Header="Raised">
-                        <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
-                        <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
+                        <MenuItem x:Name="glazedMenuItem" Header="Glazed" IsCheckable="True"/>
+                        <MenuItem x:Name="sugarMenuItem" Header="Sugar" IsCheckable="True"/>
                     </MenuItem>
                     <MenuItem Header="Filled">
-                        <MenuItem x:Name="lemonFilledMenuItem" Header="Lemon"/>
-                        <MenuItem x:Name="chocolateFilledMenuItem" Header="Chocolate"/>
-                        <MenuItem x:Name="vanillaFilledMenuItem" Header="Vanilla"/>
+                        <MenuItem x:Name="lemonFilledMenuItem" Header="Lemon" IsCheckable="True"/>
+                        <MenuItem x:Name="chocolateFilledMenuItem" Header="Chocolate" IsCheckable="True"/>
+                        <MenuItem x:Name="vanillaFilledMenuItem" Header="Vanilla" IsCheckable="True"/>
                     </MenuItem>
                 </MenuItem>
                 <MenuItem Header="Stop"/>

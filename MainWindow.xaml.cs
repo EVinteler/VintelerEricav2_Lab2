@@ -14,7 +14,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
-
 namespace VintelerEricav2_Lab2
 {
     /// <summary>
