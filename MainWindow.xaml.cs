@@ -102,8 +102,13 @@ namespace VintelerEricav2_Lab2
             DoughnutFlavour = SelectedItem.Header.ToString();
             Enum.TryParse(DoughnutFlavour, out DoughnutType myFlavour);
             myDoughnutMachine.MakeDoughnuts(myFlavour);
-
         }
-
+        private void FilledItemsShow_Click(object sender, RoutedEventArgs e)
+        {
+            string mesaj;
+            MenuItem SelectedItem = (MenuItem)e.OriginalSource;
+            mesaj = SelectedItem.Header.ToString() + " doughnuts are being cooked!";
+            this.Title = mesaj;
+        }
     }
 }
