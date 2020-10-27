@@ -31,8 +31,7 @@ namespace VintelerEricav2_Lab2
         private void frmMain_Loaded(object sender, RoutedEventArgs e)
         {
             myDoughnutMachine = new DoughnutMachine();
-            myDoughnutMachine.DoughnutComplete += new
-            DoughnutMachine.DoughnutCompleteDelegate(DoughnutCompleteHandler);
+            myDoughnutMachine.DoughnutComplete += new DoughnutMachine.DoughnutCompleteDelegate(DoughnutCompleteHandler);
         }
 
         private int mRaisedGlazed;
