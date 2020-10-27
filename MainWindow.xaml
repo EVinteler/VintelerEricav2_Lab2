@@ -6,26 +6,26 @@
         xmlns:local="clr-namespace:VintelerEricav2_Lab2"
         mc:Ignorable="d"
         Title="Virtual Doughnuts Factory" Height="450" Width="800" ResizeMode="NoResize" Background="#FF9CC6F4" Loaded="frmMain_Loaded">
-    <Grid MenuItem.Click="FilledItemsShow_Click">
-        <GroupBox x:Name="gbRaised" Header="Raised" Margin="99,79,505,233" FontWeight="Normal"/>
-        <GroupBox x:Name="gbFilled" Header="Filled" Margin="410,72,140,216" FontWeight="Bold"/>
-        <TextBox x:Name="txtGlazedRaised" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="175,112,521,293"/>
-        <TextBox x:Name="txtSugarRaised" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="175,154,521,249"/>
-        <Label x:Name="lblChocolateFilled" Content="Chocolate" Margin="424,132,236,272"/>
-        <Label x:Name="lblLemonFilled" Content="Lemon" Margin="426,95,258,306" RenderTransformOrigin="0.5,0.5">
+    <Grid MenuItem.Click="FilledItemsShow_Click" Margin="0,0,0,-40">
+        <GroupBox x:Name="gbRaised" Header="Raised" Margin="101,73,503,239" FontWeight="Normal"/>
+        <GroupBox x:Name="gbFilled" Header="Filled" Margin="396,62,154,226" FontWeight="Bold"/>
+        <TextBox x:Name="txtGlazedRaised" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="177,106,519,299"/>
+        <TextBox x:Name="txtSugarRaised" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="177,148,519,255"/>
+        <Label x:Name="lblChocolateFilled" Content="Chocolate" Margin="410,122,250,282"/>
+        <Label x:Name="lblLemonFilled" Content="Lemon" Margin="412,85,272,316" RenderTransformOrigin="0.5,0.5">
         </Label>
-        <TextBox x:Name="txtLemonFilled" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="534,103,162,307"/>
-        <TextBox x:Name="txtChocolateFilled" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="534,138,162,272"/>
-        <Label x:Name="lblVanillaFilled" Content="Vanilla" Margin="424,176,286,233"/>
-        <TextBox x:Name="txtVanillaFilled" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="534,174,162,233"/>
+        <TextBox x:Name="txtLemonFilled" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="520,93,176,317"/>
+        <TextBox x:Name="txtChocolateFilled" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="520,128,176,282"/>
+        <Label x:Name="lblVanillaFilled" Content="Vanilla" Margin="410,166,300,243"/>
+        <TextBox x:Name="txtVanillaFilled" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="520,164,176,243"/>
         <GroupBox x:Name="gbSale" Header="Current Sale" Margin="34,228,40,10" FontWeight="Bold"/>
-        <Label x:Name="lblGlazed" Content="Glazed" Margin="115,110,631,293"/>
-        <Label x:Name="lblSugar" Content="Sugar" Margin="115,154,631,249"/>
-        <Label x:Name="lblTitle" Content="Doughnuts - Bake &amp; Sale" Margin="215,23,293,368" FontSize="24" FontWeight="Bold"/>
+        <Label x:Name="lblGlazed" Content="Glazed" Margin="117,104,629,299"/>
+        <Label x:Name="lblSugar" Content="Sugar" Margin="117,148,629,255"/>
+        <Label x:Name="lblTitle" Content="Doughnuts - Bake &amp; Sale" Margin="208,19,300,372" FontSize="24" FontWeight="Bold"/>
         <Label x:Name="lblQuantity" Content="Quantity" Margin="53,263,688,141"/>
         <TextBox x:Name="txtQuantity" Text="0" TextWrapping="Wrap" IsReadOnly="True" Margin="117,263,579,140"/>
         <Label x:Name="lblType" Content="Type" Margin="237,264,509,140"/>
-        <ComboBox x:Name="cmbType" Width="120" Margin="282,261,398,139"/>
+        <ComboBox x:Name="cmbType" Width="120" Margin="282,261,398,139" SelectionChanged="cmbType_SelectionChanged"/>
         <Label x:Name="lblPrice" Content="Price" Margin="421,264,325,140"/>
         <TextBox x:Name="txtPrice" TextWrapping="Wrap" IsReadOnly="True" Margin="468,263,228,141"/>
         <ListBox x:Name="lstSale" Margin="53,312,228,64"/>

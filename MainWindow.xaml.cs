@@ -27,11 +27,24 @@ namespace VintelerEricav2_Lab2
         }
 
         private DoughnutMachine myDoughnutMachine;
+        DoughnutType selectedDoughnut;
+        KeyValuePair<DoughnutType, double>[] PriceList = {
+         new KeyValuePair<DoughnutType, double>(DoughnutType.Sugar, 2.5),
+         new KeyValuePair<DoughnutType, double>(DoughnutType.Glazed,3),
+         new KeyValuePair<DoughnutType, double>(DoughnutType.Chocolate,4.5),
+         new KeyValuePair<DoughnutType, double>(DoughnutType.Vanilla,4),
+         new KeyValuePair<DoughnutType, double>(DoughnutType.Lemon,3.5)
+        };
 
         private void frmMain_Loaded(object sender, RoutedEventArgs e)
         {
             myDoughnutMachine = new DoughnutMachine();
             myDoughnutMachine.DoughnutComplete += new DoughnutMachine.DoughnutCompleteDelegate(DoughnutCompleteHandler);
+
+            cmbType.ItemsSource = PriceList;
+            cmbType.DisplayMemberPath = "Key";
+            cmbType.SelectedValuePath = "Value";
+
         }
 
         private int mRaisedGlazed;
@@ -110,5 +123,6 @@ namespace VintelerEricav2_Lab2
             mesaj = SelectedItem.Header.ToString() + " doughnuts are being cooked!";
             this.Title = mesaj;
         }
+        
     }
 }
