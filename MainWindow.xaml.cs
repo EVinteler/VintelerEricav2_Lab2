@@ -44,7 +44,6 @@ namespace VintelerEricav2_Lab2
         private object glazedToolStripMenuItem;
         private object sugarToolStripMenuItem;
 
-        public object DoughnutType { get; private set; }
 
         private void glazedToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
@@ -67,7 +66,6 @@ namespace VintelerEricav2_Lab2
                     mRaisedGlazed++;
                     txtGlazedRaised.Text = mRaisedGlazed.ToString();
                     break;
-
                 case DoughnutType.Sugar:
                     mRaisedSugar++;
                     txtSugarRaised.Text = mRaisedSugar.ToString();
